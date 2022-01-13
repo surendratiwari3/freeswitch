@@ -922,7 +922,7 @@ static switch_status_t shout_file_close(switch_file_handle_t *handle)
 {
 	shout_context_t *context = handle->private_info;
 
-	free_context(context);
+	free_context(context->handle);
 
 	return SWITCH_STATUS_SUCCESS;
 }
